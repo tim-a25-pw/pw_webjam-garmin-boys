@@ -6,11 +6,11 @@
             <div class="wrapper">
                 <!--media-->
                 <div class="hero__media">
-                    <img src="" alt="" />
+                    <?php the_post_thumbnail('full'); ?>
                 </div>
                 <!--content-->
                 <div class="hero__content">
-                    <h1 class="hero__title">TITRE DE LA PAGE</h1>
+                    <h1 class="hero__title"><?php the_title(); ?></h1>
                 </div>
             </div>
         </section>
@@ -24,8 +24,10 @@
                 </div>
                 <!--content-->
                 <div class="intro__content">
-                    <h2>INTRO TITLE</h2>
-                    <p>INTRO DESCRIPTION</p>
+                    <?php if(get_field('gb_titre_intro')) :?>
+                    <h2>  <?php (the_field('gb_titre_intro'));?></h2>
+                     <?php if(get_field('gb_description_intro')) :?>
+                    <p><?php (the_field('gb_description_intro'));?></p>
                 </div>
             </div>
         </section>
@@ -33,28 +35,26 @@
         <!--OEUVRES-->
         <section class="section art">
             <div class="wrapper">
-                <h2>SECTION TITLE</h2>
+                   <?php if(get_field('gb_titres_oeuvres')) :?>
+                <h2>  <?php if(get_field('gb_titres_oeuvres')) :?></h2>
+                    <?php if(have_rows("gb_repeteur_oeuvres")) :?>
                 <div class="cards">
+ <?php while (have_rows('gb_repeteur_oeuvres')) : the_row(); 
+            $post_obj = get_sub_field('oeuvre');
+            if ($post_obj && has_term('livres', 'category', $post_obj->ID)) :
+            
+                $thumb = get_the_post_thumbnail($post_obj->ID, 'medium');
+                $title = get_the_title($post_obj->ID);
+                $permalink = get_permalink($post_obj->ID);
+        ?>
+
                     <a class="card hover">
                         <!--media-->
                         <div class="card__media">
                             <img src="" alt="" />
                         </div>
                     </a>
-                    <a class="card hover">
-                        <!--media-->
-                        <div class="card__media">
-                            <img src="" alt="" />
-                        </div>
-                        <!--content-->
-                    </a>
-                    <a class="card hover">
-                        <!--media-->
-                        <div class="card__media">
-                            <img src="" alt="" />
-                        </div>
-                        <!--content-->
-                    </a>
+                   
                 </div>
             </div>
         </section>
