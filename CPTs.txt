@@ -1,0 +1,13 @@
+Oeuvres:
+    -description: the-content()
+    -auteur: ACF text
+    -type: catégories
+    -image principale: the_post_thumbnail()
+    -extraits: Zone de text
+    -galerie: Répéteur images
+
+Membres:
+    -Nom: title
+    -Image: the_post_thumbnail
+    -Rôle: text
+    -Vidéo: oEmbed
