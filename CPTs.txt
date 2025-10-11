@@ -11,3 +11,20 @@ Membres:
     -Image: the_post_thumbnail
     -Rôle: text
     -Vidéo: oEmbed
+
+Accueil:
+    -Nom: title
+    -Image: the_post_thumbnail
+    
+    Mission
+    -Titre: text
+    -Description: Zone de text
+    -Image: Répéteur -> images
+
+    Fonctionnalités:
+    Titre: text
+    Cartes; répéteur -> Image, titre (text) et description(Zone de text)
+
+    Univers:
+    Title: text
+    Univers: Répéteur(link)
