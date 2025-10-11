@@ -206,3 +206,59 @@
         overflow: auto;
     }
 }
+
+// Style for submenu ul
+.sub-menu {
+    display: none; // hide by default (mobile)
+
+    @media screen and (min-width: $breakpoint-md) {
+        display: flex !important; // horizontal submenu on desktop
+        position: absolute;
+        top: 100%; // right below parent menu item
+        left: 0;
+        background-color: var(--color-bg-secondary);
+        padding: 10px 0;
+        margin: 0;
+        list-style: none;
+        gap: 20px; // spacing between submenu items
+        min-width: 200px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        z-index: 1000;
+    }
+}
+
+// Make parent menu item position relative so submenu positions properly
+.menu-item-has-children {
+    position: relative;
+}
+
+// Show submenu on hover for desktop
+@media screen and (min-width: $breakpoint-md) {
+    .menu-item-has-children:hover > .sub-menu {
+        display: flex !important;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+// Style submenu items links
+.sub-menu > li > a {
+    padding: 8px 12px;
+    white-space: nowrap;
+    color: var(--color-white);
+    font-size: var(--font-size-p); // or adjust as needed
+    text-transform: none;
+    display: block;
+
+    &:hover {
+        color: var(--color-primary); // your hover color
+    }
+}
+
+.menu-item-has-children > a {
+    cursor: default;
+    pointer-events: none;
+    color: var(--color-white);
+    text-decoration: none;
+}
