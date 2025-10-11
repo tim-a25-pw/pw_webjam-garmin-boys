@@ -1,0 +1,119 @@
+<?php /* Template Name: Liste de univers */ ?>
+
+<?php get_header(); ?>
+<!--HERO SECTION (oeuvre mise en vedette)-->
+<section class="section hero">
+    <div class="wrapper">
+        <!--media-->
+        <div class="hero__media">
+            <img src="" alt="" />
+        </div>
+        <!--content-->
+        <div class="hero__content">
+            <h1 class="hero__title">TITRE DE LA PAGE</h1>
+            <p class="hero__text">TEXTE D'INTRO</p>
+            <a href="" class="button">BUTTON</a>
+        </div>
+    </div>
+</section>
+
+<!--INTRODUCTION-->
+<section class="section intro">
+    <div class="wrapper">
+        <!--media-->
+        <div class="intro__media">
+            <img src="" alt="" />
+        </div>
+        <!--content-->
+        <div class="intro__content">
+            <h2>INTRO TITLE</h2>
+            <h3>INTRO SUBTITLE</h3>
+            <p>INTRO DESCRIPTION</p>
+        </div>
+    </div>
+</section>
+
+<!--INTERACTIONS-->
+<section class="section interact">
+    <div class="wrapper">
+        <h2>SECTION TITLE</h2>
+        <div class="cards">
+            <div class="card">
+                <!--media-->
+                <div class="card__media">
+                    <img src="" alt="" />
+                </div>
+                <!--content-->
+                <div class="card__content">
+                    <h3>CARD TITLE</h3>
+                    <p>CARD DESCRIPTION</p>
+                </div>
+            </div>
+            <div class="card">
+                <!--media-->
+                <div class="card__media">
+                    <img src="" alt="" />
+                </div>
+                <!--content-->
+                <div class="card__content">
+                    <h3>CARD TITLE</h3>
+                    <p>CARD DESCRIPTION</p>
+                </div>
+            </div>
+            <div class="card">
+                <!--media-->
+                <div class="card__media">
+                    <img src="" alt="" />
+                </div>
+                <!--content-->
+                <div class="card__content">
+                    <h3>CARD TITLE</h3>
+                    <p>CARD DESCRIPTION</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--OEUVRES-->
+<section class="section art">
+    <div class="wrapper">
+        <h2>SECTION TITLE</h2>
+        <div class="cards">
+            <a class="card hover">
+                <!--media-->
+                <div class="card__media">
+                    <img src="" alt="" />
+                </div>
+                <!--content-->
+                <div class="card__content">
+                    <h3>CARD TITLE</h3>
+                    <p>CARD DESCRIPTION</p>
+                </div>
+            </a>
+            <a class="card hover">
+                <!--media-->
+                <div class="card__media">
+                    <img src="" alt="" />
+                </div>
+                <!--content-->
+                <div class="card__content">
+                    <h3>CARD TITLE</h3>
+                    <p>CARD DESCRIPTION</p>
+                </div>
+            </a>
+            <a class="card hover">
+                <!--media-->
+                <div class="card__media">
+                    <img src="" alt="" />
+                </div>
+                <!--content-->
+                <div class="card__content">
+                    <h3>CARD TITLE</h3>
+                    <p>CARD DESCRIPTION</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+<?php get_footer(); ?>
