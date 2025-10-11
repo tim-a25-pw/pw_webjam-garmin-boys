@@ -4,7 +4,7 @@
 
 .header {
     --header-height: 100px;
-    background-color: var(--color-bg-secondary);
+    background-color: var(--color-bg-primary);
     align-items: center;
     display: flex;
     justify-content: space-between;
@@ -15,7 +15,7 @@
     z-index: 10;
     transition: transform 0.6s $ease-out-expo;
     &::before {
-        background-color: var(--color-bg-secondary);
+        background-color: var(--color-bg-primary);
 
         content: '';
         position: absolute;
@@ -44,7 +44,7 @@
 // Mettre ton .header__toggle ici
 
 .nav-primary {
-    background-color: var(--color-bg-secondary);
+    background-color: var(--color-bg-primary);
     position: absolute;
     top: 0;
     left: 0;
@@ -105,7 +105,7 @@
 
 .nav-primary__item {
     font-size: var(--font-size-h1);
-    color: var(--color-white);
+    color: var(--color-black);
     text-transform: uppercase;
     position: relative;
 
@@ -205,4 +205,55 @@
     @media screen and (min-width: $breakpoint-lg) {
         overflow: auto;
     }
+}
+
+/* Hide submenu by default */
+.nav-primary ul.sub-menu {
+    display: none; // Always hidden initially
+    flex-direction: column; // submenu items stacked vertically
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-bg-secondary);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    z-index: 1000;
+}
+
+/* Make parent menu item position relative for submenu positioning */
+.menu-item-has-children {
+    position: relative;
+}
+
+/* Show submenu on hover for desktop */
+@media screen and (min-width: $breakpoint-md) {
+    .menu-item-has-children:hover > .sub-menu {
+        display: flex; // Show submenu on hover
+    }
+}
+
+/* Submenu link styles */
+.sub-menu > li > a {
+    display: block;
+    padding: 8px 12px;
+    color: var(--color-white);
+    font-size: var(--font-size-p);
+    white-space: nowrap;
+    text-transform: none;
+}
+
+.sub-menu > li > a:hover {
+    color: var(--color-primary);
+}
+
+/* Optional: if you want the parent menu item (with submenu) NOT clickable */
+.menu-item-has-children > a {
+    cursor: default;
+    pointer-events: none; /* disables click on parent */
+    color: var(--color-black);
+    text-decoration: none;
 }
