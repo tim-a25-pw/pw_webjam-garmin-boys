@@ -4,10 +4,17 @@
 
 :root {
     // Couleur de base
-    --color-white: #fff;
-    --color-black: #000;
+    --color-white: #f2e5d5;
+    --color-black: #40362d;
 
     // Couleurs du projet
-    --color-primary: tomato;
-    --color-bg-primary: #e2e2e2;
+    --color-primary: #9e3d2d;
+    --color-secondary: #d26441;
+    --color-tertiary: #eca52f;
+
+    --color-bg-primary: #f2e5d5;
+    --color-bg-secondary: #40362d;
+
+    --color-cta: #9e3d2d;
+    --color-hover: #ce513c;
 }
